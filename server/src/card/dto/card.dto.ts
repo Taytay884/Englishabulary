@@ -1,13 +1,15 @@
 import { IsNotEmpty } from 'class-validator';
 
-export class CreateCardDto {
+export class CardDto {
+  @IsNotEmpty()
+  id: string;
+
   @IsNotEmpty()
   word: string;
 
   @IsNotEmpty()
   definition: string;
 
-  @IsNotEmpty()
   unit: number;
 
   hints?: string[];
