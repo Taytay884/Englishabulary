@@ -8,7 +8,6 @@ import { UserCardModule } from './user-card/user-card.module';
 import { AuthModule } from './auth/auth.module';
 import { APP_GUARD } from '@nestjs/core';
 import { JwtAuthGuard } from './auth/jwt-auth.guard';
-import { ConfigService } from './config/config.service';
 import { ConfigModule } from './config/config.module';
 
 @Module({

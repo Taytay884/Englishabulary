@@ -21,7 +21,7 @@ import { JWT_PRIVATE_KEY, JWT_PUBLIC_KEY } from './constants';
           privateKey: configService.get(JWT_PRIVATE_KEY),
           publicKey: configService.get(JWT_PUBLIC_KEY),
           signOptions: {
-            expiresIn: '60s',
+            expiresIn: '60m',
             issuer: 'AuthService',
             algorithm: 'RS256',
           },
