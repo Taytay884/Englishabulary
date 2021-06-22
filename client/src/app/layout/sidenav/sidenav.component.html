@@ -1,0 +1,3 @@
+<mat-drawer-container [ngClass]="{'side-nav-container': isDrawerOpened}" hasBackdrop="true">
+  <mat-drawer [autoFocus]="false" (openedChange)="setIsDrawerOpened($event)" #drawer mode="over">I'm a drawer</mat-drawer>
+</mat-drawer-container>
