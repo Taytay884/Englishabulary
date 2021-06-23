@@ -17,6 +17,12 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { SidenavComponent } from './layout/sidenav/sidenav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AuthInterceptor } from './auth/auth.interceptor';
+import { AuthErrorInterceptor } from './auth/auth-error.interceptor';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -35,11 +41,18 @@ import { MatListModule } from '@angular/material/list';
     MatTabsModule,
     MatSidenavModule,
     MatListModule,
+    MatInputModule,
+    MatFormFieldModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: AuthErrorInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

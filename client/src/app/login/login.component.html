@@ -1,1 +1,23 @@
-<p>login works!</p>
+  <form class="login-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <h2>Log In</h2>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="pat@example.com" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getEmailInvalidErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="isPasswordVisible ? 'text' : 'password'" [formControl]="password" required>
+      <button mat-icon-button matSuffix (click)="togglePasswordVisibility()" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="isPasswordVisible">
+        <mat-icon>{{isPasswordVisible ? 'visibility' : 'visibility_off'}}</mat-icon>
+      </button>
+      <mat-error *ngIf="password.invalid">{{getPasswordInvalidErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <button class="login-button" mat-raised-button color="primary" [disabled]="isLoading">Login</button>
+    <mat-error class="login-error" *ngIf="loginRequestError">Wrong credentials</mat-error>
+  </form>
+
+
+
