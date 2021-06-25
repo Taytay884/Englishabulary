@@ -1,0 +1,39 @@
+.home-content {
+  height: 100%;
+
+  .unit-map {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    .unit-component {
+      margin-bottom: 30px;
+      width: 75%;
+      text-align: center;
+      .mat-card-header {
+        display: flex;
+        justify-content: center;
+      }
+      .mat-progress-bar {
+        height: 8px;
+      }
+    }
+  }
+
+  .tap-to-start-screen {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .play-button {
+      width: 100px;
+      height: 100px;
+      .mat-icon {
+        height: 100%;
+        width: 100%;
+        font-size: 50px;
+      }
+    }
+  }
+}

@@ -23,6 +23,8 @@ import { AuthInterceptor } from './auth/auth.interceptor';
 import { AuthErrorInterceptor } from './auth/auth-error.interceptor';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { MatInputModule } from '@angular/material/input';
     MatListModule,
     MatInputModule,
     MatFormFieldModule,
+    MatCardModule,
+    MatProgressBarModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
