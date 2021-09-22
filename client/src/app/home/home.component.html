@@ -20,7 +20,7 @@
   <div *ngIf="chosenUnit !== -1" class="tap-to-start-screen">
     <h1>Welcome to Unit {{chosenUnit}}</h1>
     <h2>Tap to start!</h2>
-    <button class="play-button" mat-fab color="primary">
+    <button (click)="onStartButtonClicked()" class="play-button" mat-fab color="primary">
       <mat-icon>play_circle_filled</mat-icon>
     </button>
     <button (click)="onUnitChoose(-1)" class="back-button" mat-icon-button color="primary" aria-label="Example icon button with a delete icon">

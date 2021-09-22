@@ -25,6 +25,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { StudyComponent } from './study/study.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     HeaderComponent,
     FooterComponent,
     SidenavComponent,
+    StudyComponent,
   ],
   imports: [
     MatToolbarModule,

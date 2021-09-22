@@ -7,11 +7,6 @@ import { UserCard } from './schemas/user-card.schema';
 export class UserCardController {
   constructor(private readonly userCardService: UserCardService) {}
 
-  @Post()
-  async create(@Body() createUserCardDto: CreateUserCardDto) {
-    await this.userCardService.create(createUserCardDto);
-  }
-
   // @Get()
   // async findAll(): Promise<Card[]> {
   //     return this.cardService.findAll();
